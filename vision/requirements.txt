@@ -1,0 +1,7 @@
+# Computer vision tools. On the Pi, Picamera2 comes from apt (python3-picamera2).
+opencv-contrib-python>=4.8   # contrib = includes ArUco
+numpy>=1.24
+pillow>=10.0                 # printable checkerboard and markers
+pyyaml>=6.0                  # settings files
+pytest>=7.0                  # automatic tests
+# To run or train the model also install:  pip install ultralytics   (and on the Pi: ncnn)

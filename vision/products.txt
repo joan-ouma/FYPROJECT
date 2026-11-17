@@ -1,0 +1,12 @@
+# The 5 products the robot will learn to recognise.
+# One name per line, lowercase, use _ instead of spaces.
+# These names become the photo folder names and the class names in the model,
+# so do not change them once you start taking photos.
+#
+# Always buy the SAME brand and size of each product: the model learns how the packet looks.
+# egg = the model (fake) egg used in place of a real one. Use the same model egg every time.
+egg
+tea_leaves
+matchbox
+biscuits
+toothpaste
