@@ -1,0 +1,28 @@
+# Main settings for the computer vision part. Paths are relative to the vision/ folder.
+
+camera:
+  width: 1280
+  height: 720
+  lens_position: null        # Camera Module 3: lock focus, e.g. 2.0. Use the SAME value as for calibration.
+  calibration_file: calibration/camera_calibration.yaml
+
+model:
+  weights: models/best_ncnn_model   # after export_model.py; use models/best.pt on a laptop
+  image_size: 640                   # size the model was trained at
+  min_confidence: 0.25              # detections below this are ignored completely
+
+confirm:
+  min_confidence: 0.6        # proposal: confidence of at least 0.6 ...
+  frames_in_a_row: 3         # ... in 3 frames in a row
+
+aruco:
+  dictionary: DICT_4X4_50    # must match the printed markers
+  marker_size_mm: 40.0       # measure the printed black square with a ruler and put it here
+
+locator:
+  shelf_slots_file: config/shelf_slots.yaml
+  camera_to_arm_file: config/camera_to_arm.yaml
+  max_match_distance_px: 120 # how far the item can be from where the slot says it should be
+
+find_item:
+  timeout_s: 8.0             # give up looking for an item after this long

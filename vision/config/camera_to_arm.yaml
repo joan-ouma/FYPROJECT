@@ -1,0 +1,14 @@
+# Where the camera is compared with the arm's base (the arm's frame used by Joy's IK).
+# Arm frame (agree this with Joy): origin at the centre of the arm's base at table level,
+#   x = forward (towards the shelf), y = left, z = up (all in mm).
+#
+# Easiest: run  python3 tools/measure_camera_to_arm.py  which works this out from a marker
+# placed at a known spot, and overwrites this file.
+# Otherwise fill it in by hand: translation = camera position in the arm frame (mm),
+# rotation_rpy_deg = camera rotation [roll, pitch, yaw] in degrees.
+#
+# Example below: camera 60 mm behind the arm base, 250 mm up, looking straight forward.
+
+translation_mm: [-60.0, 0.0, 250.0]
+rotation_rpy_deg: [-90.0, 0.0, -90.0]   # camera z (view direction) = arm x (forward)
+measured: false                          # becomes true when measure_camera_to_arm.py writes this file
